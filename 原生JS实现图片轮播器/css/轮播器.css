@@ -1,0 +1,184 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* 页面背景 */
+body {
+    background-color: darkgray;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+}
+
+/* 轮播器 */
+#lubo {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    border: 3px solid black;
+}
+
+
+/* 图片容器 */
+#container {
+    /* 容器尺寸 */
+    height: 335px;
+    /* 定位--为了方便其子元素绝对定位 */
+    position: relative;
+    /* 图片轮播器实现的关键 */
+    overflow: hidden;
+}
+
+#container:hover #next { 
+    right: 0px;
+}
+
+#container:hover #prev {
+    left: 0px;
+}
+
+#container:hover .imgDes {
+    bottom: 4px;
+}
+
+#container:hover #progress {
+    bottom: -10px;
+}
+
+/* 图片组 */
+#list {
+    position: absolute;
+}
+
+#list ul {
+    width: 4800px;
+    list-style: none;
+}
+
+#list li {
+    float: left;
+}
+
+.imgDes {
+    position: absolute;
+    bottom: 14px;
+
+    width: 800px;
+    background: rgba(0, 0, 0, 0.5);
+
+    font-size: 1.6em;
+    color: white;
+    font-weight: bolder;
+
+    transition: bottom 0.4s;
+
+}
+
+.des { 
+    padding-left: 10px;
+    float: left;
+
+}
+
+.page {
+    padding-right: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+}
+
+.page span {
+    font-style: oblique;
+    color: red;
+    font-size: 2.5em;
+}
+
+/* next和prev按钮 */
+.arrow {
+    /* 按钮样式 */
+    font-size: 72px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(220, 220, 220, 0.8);
+
+    /* 按钮定位 */
+    position: absolute;
+    top: 160px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+#prev {
+    left: -40px;
+    transition: left 0.5s;
+}
+
+#next {
+    right: -40px;
+    transition: right 0.5s;
+}
+
+/* 轮播指示器 */
+#buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 365px;
+
+    width: 70px;
+    height: 10px;
+
+    display: none;
+}
+
+#buttons span {
+    float: left;
+
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+
+    cursor: pointer;
+    
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background: #333333;
+}
+
+#buttons span.on {
+    background: orange;
+}
+
+/* 进度条 */
+#progress {
+    position: absolute;
+    bottom: 0px;
+    width: 806px;
+    margin: auto;
+    background-color: black;
+
+    transition: bottom 0.4s;
+}
+
+#tiao {
+    height: 10px;
+    background-color: darkred;
+    /* display: none; */
+}
+
+#yulan {
+    height: 95px;
+}
+
+#yulanList img {
+    float: left;
+    width: 180px;
+    border: 10px solid black;
+}
+
+#yulanList img.active {
+    border: 10px solid rgba(100, 100, 100, 0.8);
+}

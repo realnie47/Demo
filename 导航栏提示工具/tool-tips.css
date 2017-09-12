@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #47c9af;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+}
+
+nav {
+    width: 820px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+nav ul {
+    height: 300px;
+    list-style: none;
+    font-size: 2em;
+    font-weight: bold;    
+}
+
+nav li {
+    float: left;
+    margin: 0 20px 0 20px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.tooltip-content {
+    position: absolute;
+    top: -100px;
+    height: 80px;
+
+    /* 相对于父元素居中 */
+    width: 80px;
+    left: 50%;
+    margin-left: -40px;
+
+    border-radius: 50%;
+
+    padding-top: 25px;
+    background-color: white;
+
+    text-align: center;
+    opacity: 0;
+}
+
+nav a:hover .tooltip-content {
+    color: #47c9af;
+
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+.effect-1 .tooltip-content {
+    /* 平移、旋转 */
+    transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    /* transform的中心点 */
+    transform-origin: 50% 100%;
+    transition: opacity 0.3s,transform 0.3s;
+}
+
+.tooltip-content::after {
+    content: "";
+    background: url(tooltip1.svg) no-repeat center center;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    left: 50%;
+    margin-left: -15px;
+    top: 91%;
+}
+
+
+
+

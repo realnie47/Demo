@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav-tabs</title>
+    <link rel="stylesheet" href="nav-tab.css">
+</head>
+<body>
+    <div id="container">
+        <nav id="tab-group">
+            <ul class="nav" id="navList">
+                <li class="active" index="0">
+                    <a href="#">主页</a>
+                </li>
+                <li index="1">
+                    <a href="#">新闻</a>
+                </li>
+                <li index="2">
+                    <a href="#">个人</a>
+                </li>
+                <li index="3">
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="home-page" class="activePage">
+                <h1>主页</h1>
+            </div>
+            <div id="news-page" class="hidden">
+                <h1>新闻</h1>
+            </div>
+            <div id="user-page" class="hidden">
+                <h1>个人</h1>
+            </div>
+            <div id="help-page" class="hidden">
+                <h1>帮助</h1>
+            </div>
+        </div>
+    </div>
+<script src="nav-tabs.js"></script>
+</body>
+</html>

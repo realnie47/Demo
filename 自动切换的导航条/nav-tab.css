@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+#container {
+    width: 1280px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.nav {
+    list-style: none;
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+    /* 解决子元素margin-top与父元素重叠的问题 */
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+    margin-right: 1px;
+}
+
+.nav a {
+    background-color: lightgray;
+    display: block;
+    height: 34px;
+    width: 80px;
+    text-align: center;
+    line-height: 34px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 16px;
+    transition: margin-top,0.2s;
+}
+
+.nav li.active a{
+    background-color: green;
+    color: white;
+    line-height: 3em;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    
+}
+
+#content {
+    /* display: none; */
+    margin-top: 20px;
+}
+
+.activePage {
+    height: 50px;
+    display: block;
+}
+
+.activePage h1 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

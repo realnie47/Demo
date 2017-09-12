@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播器JS的副本</title>
+    <link rel="stylesheet" href="css/轮播器.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+<div id="lubo">
+    <div id="container">
+        <div id="list" style="left: -800px">
+            <ul>
+                <li>
+                    <img src="image/D3.jpg" alt="3">
+                    <div class="imgDes">
+                        <p class="des">夜来风雨声，花落知多少</p>
+                        <p class="page"><span>4</span>/4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/D0.jpg" alt="0">
+                    <div class="imgDes">
+                        <p class="des">窗前明月光，疑是地上霜</p>
+                        <p class="page"><span>1</span>/4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/D1.jpg" alt="1">
+                    <div class="imgDes">
+                        <p class="des">举头望明月，低头思故乡</p>
+                        <p class="page"><span>2</span>/4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/D2.jpg" alt="2">
+                    <div class="imgDes">
+                        <p class="des">春眠不觉晓，处处闻啼鸟</p>
+                        <p class="page"><span>3</span>/4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/D3.jpg" alt="3">
+                    <div class="imgDes">
+                        <p class="des">夜来风雨声，花落知多少</p>
+                        <p class="page"><span>4</span>/4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/D0.jpg" alt="0"> 
+                    <div class="imgDes">
+                        <p class="des">窗前明月光，疑是地上霜</p>
+                        <p class="page"><span>1</span>/4</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="buttons">
+            <span index="0" class="on"></span>
+            <span index="1"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+        </div>
+        <a href="#" id="prev" class="arrow"><i class="fa fa-caret-left"></i></a>
+        <a href="#" id="next" class="arrow"><i class="fa fa-caret-right"></i></a>
+        <div id="progress">
+             <div id="tiao" style="width:0px"></div>
+        </div>
+    </div>
+    <div id="yulan">
+            <div id="yulanList">
+                <img src="image/D0.jpg" index="0" class="active"><img src="image/D1.jpg" index="1"><img src="image/D2.jpg" index="2"><img src="image/D3.jpg" index="3">
+            </div>
+    </div>
+</div>
+    <script src="js/轮播器.js"></script>
+</body>
+</html>

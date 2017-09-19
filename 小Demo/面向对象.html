@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    <script>
+        $.ajax({
+                type: "GET",
+                url: "https://api.imjad.cn/cloudmusic/?type=artist&id=893259",
+                dataType: "JSON",
+                success: function (response) {
+                    var artist = new Artist(response.artist);
+                    console.log(artist);
+                    artist.describe();
+                }
+            });
+
+        // 创建对象的四种方法
+        // 1.new一个对象并为对象属性赋值 -麻烦
+        // 2.字面量方法创建对象 -稍简单 不适合创建大量对象
+        // 3.工厂模式创建对象 -适合创建大量对象 都是object对象 无法区分对象具体类型
+        // 4.构造函数 -创建不同对象后使用的方法不是同一个Function实例 资源量费
+        
+
+        // 实际开发中：构造函数和原型组合模式
+        // 构造歌手对象
+        function Artist(json) {
+            // 对象属性
+            this.name = json.name;
+            this.picUrl = json.picUrl;
+            this.briefDesc = json.briefDesc;
+
+            // 对象方法
+        }
+        // 原型 
+        // 原型属性 
+        // 最主要的一点是数据共享，创建对象的时候，我们会把公共的方法和属性挂载到原型上，避免资源浪费。
+        // JS没有类的概念 所以使用原型链的概念
+        Artist.prototype = {
+            constructor: Artist, // 在多级继承的时候，指明构造函数方便在对象上扩展原型属性
+            describe : function() {
+                console.log(this.name + '简介：' + this.briefDesc);
+            }
+        }
+
+    </script>
+</body>
+</html>

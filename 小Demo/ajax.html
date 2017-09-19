@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+    <script>
+        function xhrHttp() {
+            var xml = new XMLHttpRequest();
+            xml.onreadystatechange = function() {
+		        if (xml.readyState == 4 && xml.status == 200) {
+                    console.log(typeof(xml.responseText)); //string 返回一个字符串
+                    var object = JSON.parse(xml.responseText); //字符串转化为对象
+                    console.log(typeof(object)); //object
+		        }
+	        }
+            xml.open("GET","https://api.imjad.cn/cloudmusic/?type=artist&id=893259",true);
+            xml.send();
+        }
+
+        function jQhttp() {
+            $.ajax({
+                type: "GET",
+                url: "https://api.imjad.cn/cloudmusic/?type=artist&id=893259",
+                dataType: "JSON",
+                success: function (response) {
+                    console.log(typeof(response));//object
+                    // Jquery自动将返回的字符串解析为对象
+                }
+            });
+        }
+        
+        $(document).ready(function () {
+            jQhttp();
+        });
+    </script>
+</body>
+</html>

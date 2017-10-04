@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif
+}
+
+div#headAd {
+    height: 120px;
+    /* background-image: url(ad.png) */
+}
+
+div#nav {
+    height: 40px;
+    background-color: #333;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+div.container {
+    width: 1226px;
+    margin: auto;
+}
+
+div#menu {
+    float: left;
+}
+
+div#shopCar {
+    float: right
+}
+
+div#shopCar ul li a {
+    display: block;
+    width: 120px;
+    text-align: center;
+    background-color: #424242
+}
+
+div#shopCar ul li a:hover {
+    background-color: white;
+    color: red
+}
+
+div#user {
+    float: right;
+}
+
+div#nav ul li {
+    float: left;
+    list-style: none;
+    
+}
+
+div#nav ul li a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+div#nav ul li a:hover {
+    color: white
+}
+
+div#shopCar {
+    margin-left: 15px;
+    position: relative;
+}
+
+div#shopCar ul li a:hover {
+    background-color: white;
+    color: red
+}  
+
+div#shopCar div#shopList {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    box-shadow: 2px 2px 5px #cccccc;
+    text-align: center;
+    line-height: 100px;
+    color: #666666;
+    display: none;
+}
+
+
+div#nav span.space {
+    color: #424242;
+    margin: 4px
+}
+
+div#head {
+    height: 100px;
+    /* background-color: gray */
+}
+
+div#head-logo {
+    float: left;
+    width: 55px;
+    height: 55px;
+    background-image: url("../image/logo.png");
+    margin-top: 20px
+
+}
+
+div#head-nav {
+    line-height: 100px;
+    font-size: 16px;
+    padding-left: 180px;
+    width: 670px;
+    float: left
+}
+
+div#head-nav ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    list-style: none;
+}
+
+div#head-nav ul li a {
+    text-decoration: none;
+    color: black
+}
+
+div#head-nav ul li a:hover {
+    color: red
+}
+
+div#head-search {
+    float: right;
+}
+
+div#goods-container {
+    position: relative;
+}
+
+/* 轮播器 */
+div#container {
+    height: 460px;
+}
+
+
+/* 分类菜单 */
+div#fenlei {
+    height: 460px;
+    width: 234px;
+    background-color:rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0
+}
+
+div#fenlei ul {
+    margin-top: 30px;
+    list-style: none;
+}
+
+div#fenlei li {
+    padding-left: 30px;
+    height: 40px;
+    line-height: 40px;
+}
+
+div#fenlei li:hover {
+    background-color: rgb(255, 103, 0);
+}
+
+div#fenlei a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 明星产品 */
+div#hero {
+    margin-top: 14px
+}
+
+div#hero-menu {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 234px;
+    height: 170px;
+    float: left;
+}
+
+div#hero-goods ul { 
+    float: right;
+    list-style: none;
+}
+
+div#hero-goods li {
+    float: left;
+}
+
+div#hero-goods li.first {
+    margin-right: 14px;
+    background-image: url("../image/h1.jpg");
+    background-size: 316px 170px
+}
+
+div#hero-goods li.second {
+    margin-right: 14px;
+    background-image: url("../image/h2.jpg");
+    background-size: 316px 170px
+}
+
+div#hero-goods li.last {
+    background-image: url("../image/h3.jpg");
+    background-size: 316px 170px
+}
+
+div#hero-goods a {
+    display: block;
+    width: 316px;
+    height: 170px;   
+}
+
+
+
+
+
+
+

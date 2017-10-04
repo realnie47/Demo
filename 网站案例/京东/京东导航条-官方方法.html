@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>京东导航条-官方版</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /*全局指定margin、padding为0，这两个属性不继承--重要*/
+            * {
+                margin: 0;
+                padding: 0
+            }
+
+            body {
+                font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+            }
+            img {
+                display: block
+            }
+
+            div#nav {
+                background-color: #e3e4e5;
+                height: 30px
+            }
+
+            div#container {
+                color: #999;
+                /*指定高度--重要*/
+                height: 30px;
+                width: 1204px;
+                /*居中*/
+                margin: 0 auto;
+                line-height: 30px
+            }
+
+            ul#location {
+                float: left;
+            }
+
+            ul#user {
+                float: right
+            }
+
+            li {
+                /*li元素也要浮动，不然会排成一列*/
+                /*float: left;*/
+                /*与上面效果相同*/
+                display: inline-block;
+                list-style: none;
+                padding-left: 5px;
+                padding-right: 5px
+            }
+
+            div#nav a {
+                text-decoration: none;
+                color: #999
+            }
+
+            div#nav a:hover {
+                color: red
+            }
+
+            .sep {
+                margin-left: 5px
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="topAD">
+            <img src="topAD.png" alt="广告">
+        </div>
+        <div id="nav">   
+            <div id="container">
+                <ul id="location">
+                    <li>北京</li>
+                </ul>
+                <ul id="user">
+                    <li><a href="#">您好请登录</a></li>
+                    <li><a href="#" style="color:red">免费注册</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">我的京东</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">京东会员</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">企业采购</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">客户服务</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">网站导航</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">手机京东</a></li>
+                </ul>
+            </div>
+
+        </div>
+    
+    </body>
+</html>

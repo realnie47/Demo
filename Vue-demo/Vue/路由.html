@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>路由</title>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/2.7.0/vue-router.js"></script>
+</head>
+<body>
+
+  <div id="root">
+    <div>
+      <router-link to="/home">首页</router-link>
+      <router-link to="/news">新闻</router-link>
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>
+  </div>
+
+  
+
+  
+  
+  <script>
+    var Home = {
+      template: '<h3>我是主页</h3>'
+    };
+    var News = {
+      template: `
+      <div>
+        <h3>我是新闻</h3>
+        <ul>
+          <li><router-link to="/news/todTop/date/2017">今日头条</router-link></li>
+          <li><router-link to="/news/yesTop/date/2016">昨日头条</router-link></li>
+          <li><router-link to="/news/tmTop/date/2018">明日头条</router-link></li>
+        </ul>
+        <div>
+          <router-view></router-view>
+        </div>
+      </div>
+      `
+    };
+
+    var NewsTop = {
+      template: '<div>{{ $route.params }}</div>'
+    }
+
+    // 配置路由
+    const routes = [
+      {path: '/home',component:Home},
+      {path: '/news',
+      component:News,
+      children:[
+        {path:':newsTop/date/:date',
+        component:NewsTop}
+      ]
+      },
+    ];
+
+    const router = new VueRouter({
+      routes: routes
+    })
+
+    var vm = new Vue({
+      router: router,
+      el: '#root' 
+    })
+
+
+
+  </script>
+</body>
+</html>

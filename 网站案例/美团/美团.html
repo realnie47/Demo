@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>美团导航条</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0
+            }
+            body {
+                font: 400 14px/1.5 "Hiragino Sans GB","WenQuanYi Micro Hei",tahoma,sans-serif;
+            }
+
+            div#nav {
+                height: 30px;
+                background-color: #f9f9f9;
+                box-shadow: 0 0 0 1px #fff,0 0 0 2px #ddd,0 0 5px 3px #eee;
+            }
+            div#container {
+                font-size: 12px;
+                height: 30px;
+                width: 1170px;
+                margin: 0 auto;
+                line-height: 30px
+            }
+
+            ul#login {
+                float: left
+            }
+
+            ul#user {
+                float: right
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            ul#user li {
+                float: left;
+            }
+
+            div#nav a {
+                color: #666;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            ul#user a {
+                /*指定为inline-block才能设置高度*/
+                display: inline-block;
+                height: 30px;
+                padding-left: 8px;
+                padding-right: 8px
+            }
+
+            ul#login a {
+                padding-left: 8px;
+                padding-right: 8px
+            }
+
+            div#nav a:hover {
+                color: #2BB8AA;
+                background-color: white
+            }
+
+            li.sep {
+                color: #ddd
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <div id="container">
+                <ul id="login">
+                    <li><a href="#">收藏美团</a></li>
+                    <li><a href="#" style="color:red">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li class="sep">|</li>
+                </ul>
+                <ul id="user">
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的美团</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">最近浏览</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">联系客服</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">我是商家</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">代理商招募</a></li>
+                    <li class="sep">|</li>
+                    <li><a href="#">更多</a></li>
+                </ul>
+
+
+
+
+            </div>
+            
+        </div>
+    
+    </body>
+</html>

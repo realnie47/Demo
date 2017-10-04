@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>父子组件通信</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div id="root">
+    父组件=》》》{{ giveData.a }}
+    <child-com :msg='giveData'></child-com>
+  </div>
+
+  <template id="child">
+      <div>
+        <h3>我是子组件</h3>
+        <input type="button" value="按钮" @click="change">
+        <strong>{{ msg.a }}</strong>
+      </div>
+  </template>
+
+  <script>
+
+    var Home = {
+      template: '#aaa'
+    }
+
+    var vm = new Vue({
+      el: '#root',
+      data: {
+        giveData: {
+          a: '我是子组件数据'
+        }
+      },
+      methods: {
+
+      },
+      components: {
+        'child-com': {
+          props: ['msg'],
+          template: '#child',
+          methods: {
+            change() {
+              this.msg.a = '被更改了'
+            }
+          }
+        } 
+      }
+    })
+  </script>
+</body>
+</html>

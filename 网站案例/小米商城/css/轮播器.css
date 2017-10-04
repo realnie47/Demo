@@ -1,0 +1,68 @@
+
+/* 图片容器 */
+#container {
+    /* 定位--为了方便其子元素定位 */
+    position: relative;
+    /* 图片轮播器实现的关键 */
+    overflow: hidden;
+}
+
+/* 图片组 */
+#list {
+    position: absolute;
+}
+#list img {
+    float: left;
+}
+
+/* next和prev按钮 */
+.arrow {
+    display: block;
+    padding: 10px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 200px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#prev {
+    left: 234px;
+}
+
+#next {
+    right: 0px
+}
+
+/* 轮播指示器 */
+#buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+
+    width: 70px;
+    height: 10px;
+}
+
+#buttons span {
+    float: left;
+
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+
+    cursor: pointer;
+    
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background: #333333;
+}
+
+#buttons span.on {
+    background: gray;
+}
